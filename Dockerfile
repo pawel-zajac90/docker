@@ -20,7 +20,7 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 EXPOSE 80 443 
 
 # Security
-RUN echo -en "ServerSignature Off \n ServerTokens Prod" >> /etc/apache2/conf-enabled/security.conf
+RUN echo "ServerSignature Off \n ServerTokens Prod" >> /etc/apache2/conf-enabled/security.conf
 
 # By default, simply start apache.
 CMD /usr/sbin/apache2ctl -D FOREGROUND
